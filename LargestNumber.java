@@ -3,13 +3,13 @@ import java.util.*;
 public class LargestNumber {
   // refer to pblm statement here :
   // Link : https://leetcode.com/problems/largest-number/description/
-  // Eg. arr = [3,330,34,6,7,9] ---> Output --- "97634303"(largest number)
+  // Eg. arr = [3,330,34,6,7,9] ---> Output --- "976343330"(largest number)
   // APPROACH -->
   // 1) We will be converting the int array into String array
   // JAVA mei we can do it by directly using String.valueOf(arr[i]) method OR String str = arr[i]+""(AUTOMATIC TYPE PROMOTION)
   // 2) And than we will sort the array using Arrays.sort(arr) ------- { Normal sorting method of java will sort this array in LEXICOGRAPHICAL ORDER }
   // ARRAY AFTER SORTING ---- [3,34,330,6,7,9] 
-  // But yaha pe ye issue hai ki when we will generate the final String than larget number will be "9763330343"
+  // But yaha pe ye issue hai ki when we will generate the final String than larget number will be "976330343"
   // Actual greatest number is -- "976343330"
   // 3) So isiliye when we will sort the array we will compare the numeric values jo badi hogi uss starting string ko we will keep at back
   // Eg. [34,330] -- [a,b]
