@@ -1,6 +1,7 @@
 package LEETCODE;
 import java.util.*;
 public class RotateMatrix {
+  // PBLM --- ROTATE THE IMAGE BY 90 DEGREE
   // see the pblm statement here
   // link : https://leetcode.com/problems/rotate-image/description/
   // APPROACH --->
