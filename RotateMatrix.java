@@ -18,7 +18,7 @@ public class RotateMatrix {
     int matrix [][] = new int [r][c];
     // taking user input for the matrix filling
     for(int i=0;i<r;i++){
-      for(int j=0;i<c;j++){
+      for(int j=0;j<c;j++){
         System.out.print("Enter the value ["+(i+1)+"]"+"["+(j+1)+"] :");
         matrix[i][j] = sc.nextInt();
       }
