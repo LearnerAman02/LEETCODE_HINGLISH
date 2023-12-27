@@ -7,7 +7,7 @@ public class RotateMatrix {
   // Optimal ki baat krta hoon 
   // S-1 ---> Take Transpose of matrix 
   // S-2 ---> Transpose lene ke baad arr.length/2 tak traverse krke just reverse the values
-  // ODD or EVEN Number of columns  --- { In this case run loop from i=0 to i<col.length/2 and just swap the values i.e FIRST COL ki values ko swap karo with LAST COL ki values, SECOND COL ki values ko swap karo with SECOND LAST COL ki values ke saath and so on....}
+  // ODD or EVEN Number of columns  --- { In this case run loop from i=0 to i<col.length/2  and inner loop j=0 to j<row.length and just swap the values i.e FIRST COL ki values ko swap karo with LAST COL ki values, SECOND COL ki values ko swap karo with SECOND LAST COL ki values ke saath and so on....}
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter the number of rows : ");
