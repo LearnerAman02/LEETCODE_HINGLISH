@@ -1,7 +1,8 @@
 import java.util.*;
 // REVISING BACKTRACKING
 // RAT IN A MAZE PROBLEM
-public class Lecture2 {
+// this problem is on GFG
+// LINK --> https://www.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
     public static void ratPath(int maze[][],int r,int c,String p,List<String> pathList){
         if(r==maze.length-1 && c==maze[0].length-1){
             System.out.println(p);
@@ -43,7 +44,6 @@ public class Lecture2 {
         };
         List<String> pathList = new ArrayList<>();
         ratPath(maze, 0, 0, "",pathList);
-        // bas ek aur condition aayegi ki agar maze[r-1][c-1] ==0 means no path to reach at the end and return -1
+        // bas ek aur condition aayegi ki agar maze[lastrow][lastcol] ==0 means no path to reach at the end and return -1
         System.out.println("Rat has followed the following paths : "+pathList);
     }
-}
