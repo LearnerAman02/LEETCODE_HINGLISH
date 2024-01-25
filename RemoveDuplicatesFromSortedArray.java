@@ -1,4 +1,5 @@
 // problem link --> https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+//It is actually a problem for placing non duplicate elements at the start of the array
 // Optimal Approach --> keep a ptr i=0,j=1 and count=0 
 // iterate the array with the help of j ptr and check karo ki kya nums[i]!=nums[j] than just increment karo i index ko and store nums[j] over there and also increment counter
 class Solution {
