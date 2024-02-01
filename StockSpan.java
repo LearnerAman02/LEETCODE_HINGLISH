@@ -1,4 +1,5 @@
 // problem link --> https://leetcode.com/problems/online-stock-span/description/
+// meaning of SPAN --> Maximum number of consecutive days for which price <= today's price
 // My Approach --> hum har ek din ka price ka span kitna hai uska track record rakhna hai means hume ek aisa problem solve krna hai jisme we have to store answer till that particular day
 // since answer till a particular point/day chahiye than isiliye hum STACK DATA STRUCTURE ka use karenge
 // now solving strategy --> hum har ek din ke price ko lenge and we will store in the stack , but uske pehle hum ye track rakhenge ki kya jo current day price hai woh greater than = stack ke peek par jo price hai usse
