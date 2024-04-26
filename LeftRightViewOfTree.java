@@ -59,7 +59,7 @@ SO CONCLUSION OF LOGIC -->
 Left View of a tree ke liye hume PREORDER TRAVERSAL krna hota hai aur har ek level pe ye check krna ota hai ki agar list ka size == level hai than node ke data ko add karado in list
 
 SO RIGHT VIEW OF TREE ka logic bhi same hoga -->
-just PREORDER TRAVERSAL ki jagah humne POSTORDER traversal krna hoga
+just PREORDER TRAVERSAL ki jagah humne modified PREORDER TRAVERSAL
 
 And Congratulations Aapke 2 questions solve ho gaye hai
 */
