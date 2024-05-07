@@ -1,7 +1,7 @@
 // pblm link --> https://leetcode.com/problems/boats-to-save-people/?envType=daily-question&envId=2024-05-04
 
 /*
-T.C. --> O(N)
+T.C. --> O(N logN)
 S.C. --> O(1)
 
 LOGIC --> Question ye bol raha hai ki AT MAX TWO PEOPLE CAN BE INSIDE the boat
