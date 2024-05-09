@@ -38,3 +38,5 @@ class Solution {
         return maxHappiness;
     }
 }
+
+//Approach 2 --> Array ko sort krdo and than aap values ko pick karte jaao from right end and countOfSelected child bhi maintain karte jaao and finalHappiness value mei add karte jaao happiness ki value ko agar {happiness>0}
