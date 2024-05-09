@@ -1,5 +1,7 @@
 /*
 Brute Force Approach
+T.C. --> O(N logN)
+S.C. --> O(N) {Priority Queue ka extra space}
 Logic --> hume childrens ko aise pick krna hai such that at the end vakue of HAPPINESS maximum aaye
 so hume thoda GREEDY APPROACH lagana padega, means woh childrens jinki happiness sabse jyada hai, unko pehle pick karo and than remaining students ko
 
@@ -40,3 +42,24 @@ class Solution {
 }
 
 //Approach 2 --> Array ko sort krdo and than aap values ko pick karte jaao from right end and countOfSelected child bhi maintain karte jaao and finalHappiness value mei add karte jaao happiness ki value ko agar {happiness>0}
+Time Complexity --> O(N logN) , Space complexity --> O(1)
+class Solution {
+    public long maximumHappinessSum(int[] happiness, int k) {
+        Arrays.sort(happiness);
+        long maxHapp = 0;
+        int countOfSelected = 0;//selected child ka count store krne ke liye
+        for(int i=happiness.length-1;i>=0;i--){
+            long happy = happiness[i]-countOfSelected;
+            // agar current child ki happiness > 0 and number of selected child abhi k se kam hai toh maxHappy{i.e. maximumHappiness} mei add krdo current child ki KHUSHI ko :))
+            if(happy>0 && countOfSelected<k){
+            maxHapp += happy;
+            countOfSelected++;
+            }
+            else{
+                break;
+            }
+        }
+        return maxHapp;
+    }
+
+}
