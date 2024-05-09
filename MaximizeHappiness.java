@@ -2,7 +2,7 @@
 Problem link --> https://leetcode.com/problems/maximize-happiness-of-selected-children/description/?envType=daily-question&envId=2024-05-09
 Brute Force Approach
 T.C. --> O(N logN)
-S.C. --> O(N) {Priority Queue ka extra space}
+S.C. --> O(N) {Priority Queue ka extra space + SORTING PROCESS as well}
 Logic --> hume childrens ko aise pick krna hai such that at the end vakue of HAPPINESS maximum aaye
 so hume thoda GREEDY APPROACH lagana padega, means woh childrens jinki happiness sabse jyada hai, unko pehle pick karo and than remaining students ko
 
@@ -43,7 +43,8 @@ class Solution {
 }
 
 //Approach 2 --> Array ko sort krdo and than aap values ko pick karte jaao from right end and countOfSelected child bhi maintain karte jaao and finalHappiness value mei add karte jaao happiness ki value ko agar {happiness>0}
-Time Complexity --> O(N logN) , Space complexity --> O(1)
+Time Complexity --> O(N logN) , Space complexity --> O(1) {constant space w.r.t. variables jo humne use kiye hai, but internally jab SORTING hogi tab QUICK SORT or MERGE SORT mei extra space consumption hoga hi hoga}
+so DEEP DIVE krke soche toh S.C. is not constant in this case as well
 class Solution {
     public long maximumHappinessSum(int[] happiness, int k) {
         Arrays.sort(happiness);
