@@ -38,7 +38,7 @@ Hum tree traversal ke RECURSION ka use karenge and har ek node se backtrack kart
     1
 
 min = Integer.MAX_VALUE
-           5(root)  since (root.left!=null) make recursive calls for left subtree
+           5(root)  
          /    \
     ptr 4      6
        /        \
@@ -46,7 +46,7 @@ min = Integer.MAX_VALUE
      /
     1
     
-            5(root)  since (root.left!=null) make recursive calls for left subtree
+            5(root)  
          /    \
         4      6
        /        \
@@ -54,7 +54,7 @@ min = Integer.MAX_VALUE
      /
     1
 
-            5(root)  since (root.left!=null) make recursive calls for left subtree
+            5(root)  
           /    \
          4      6
         /        \
@@ -62,7 +62,7 @@ min = Integer.MAX_VALUE
       /
 ptr   1
 
-             5(root)  since (root.left!=null) make recursive calls for left subtree
+             5(root) 
            /    \
           4      6
          /        \
@@ -75,7 +75,7 @@ now backtrack karo and upar wale level pe minimum value pass karo
 so null node pass karega Integer.MAX_VALUE upar waale node ko
 
 
-             5(root)  since (root.left!=null) make recursive calls for left subtree
+             5(root)  
            /    \
           4      6
          /        \
@@ -85,7 +85,7 @@ so null node pass karega Integer.MAX_VALUE upar waale node ko
      /
 ptr NULL 
 
-             5(root)  since (root.left!=null) make recursive calls for left subtree
+             5(root)  
            /       \
           4         6
          /            \
@@ -95,7 +95,7 @@ ptr NULL
      /
 ptr NULL 
 
-               5(root)  since (root.left!=null) make recursive calls for left subtree
+               5(root)  
              /       \
  minOf(4,1) 4         6
            /            \
