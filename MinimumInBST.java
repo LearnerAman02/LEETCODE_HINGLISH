@@ -106,6 +106,12 @@ ptr NULL
      ptr NULL 
      
 Node 4 hi last node hai jaha se left subtree ko calls lagi thi, toh woh return kar dega {1} as final minimum value from the function
+
+NOTE --> Yaha node ke upar wale pe jab call jaayegi toh uss upar wale har ek node pe RIGHT NODE ko bhi call lagega and because saare right bode NULL hai hamare LEFT SUBTREE mei, isiliye maine unke RECURSIVE call ko nhi dikhaya hai😂😂
+
+BAAKI SAMAJHDAR HO AAP😅
+
+
 */
 class Solution {
     public int min= Integer.MAX_VALUE;
