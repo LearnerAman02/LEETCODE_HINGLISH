@@ -1,7 +1,14 @@
 //pblm link --> https://leetcode.com/problems/compare-version-numbers/description/?envType=daily-question&envId=2024-05-03
 /*
 BRUTE FORCE APPROACH --> har ek revision ki value ko ko calculate kro in both the versions and store kardo in two hashmaps
+
 After that revision{index} ke basis pe just compare the revision values and find ki kaunsa version greater hai
+
+Note yaha par revisions kya hai, according to question-->
+
+revision --> 0. 1.  2
+             2.101.100
+
 
 v1 - "1.2", v2 - "1.10"
 hmap1 - {0 - 1, 1 - 2}
