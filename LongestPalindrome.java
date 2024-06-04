@@ -6,7 +6,7 @@ class Solution {
         //Simple logic ye hai ki hume string ko traverse krna hai and store krna hai count of each character occurence
         //and hum ek length variable lenge jisko we will initialize with 0 and than
         //after that hum hashmap ko traverse kr lenge and if count of a character is EVEN than length mei uss EVEN number ko add kr denge
-        //because we know "aabbcbbaa" is palindrome agar a and b ka count is EVEN
+        //because we know "aabbcbbaa" is palindrome agar a and b characters ka count is EVEN and also ODD length palindrome ke liye we need one ODD frequency/count character
         HashMap<Character,Integer> hmap = new HashMap<>();
         int n = s.length();
         for(int i=0;i<n;i++){
