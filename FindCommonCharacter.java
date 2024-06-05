@@ -2,7 +2,7 @@
 class Solution {
     public List<String> commonChars(String[] words) {
         /*
-        Approach ye hai ki hum count store karenge initially of each character in first letter of given array and than hum 
+        Approach ye hai ki hum count store karenge initially of each character in first word of given array and than hum 
         remaining strings ko traverse karenge and har ek string ke character ke frequency ko find karenge and minimum value se replace karenge
         example se samajhte hai
         initial count array of length 26 --{because hamare paas 26 LOWERCASE LETTERS hai}
@@ -14,10 +14,11 @@ class Solution {
 
         now taking the second string "label"
                  a b c d e f g    l              z
-        temp =  {1,1,0,0,1,0,0,..,2,............,0}
-        ab hum logical soche toh INTERSECTION of characters honge from string 1 and string 2 - {a,b,e,l,l}
+        temp =  {1,1,0,0,1,0,0,..,2,............,0} -- {temporary array for other words in the string}
+        ab hum logically soche toh INTERSECTION of characters honge from string 1 and string 2 - {a,b,e,l,l}
         means hume l ki minimum value se update krna padega count array 
-        yahi process krni hai ITERATIVELY simply 
+        yahi process krni hai ITERATIVELY simply for all the remaining words in array
+        finally we will get non-zero frequency/count characters in count array and wahi hamare intersection of characters honge for all the words in given array
         and at last count array ko traverse kro and characters ke frequency ke basis par unko utne time append krdo
         */
         List<String> ans = new ArrayList<>();
