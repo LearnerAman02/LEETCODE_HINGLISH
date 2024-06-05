@@ -58,4 +58,5 @@ class Solution {
 }
 
 //T.C. --> O(N*(M+26)) ~ O(N*M) {N-length of array,M-length of string at index i}//for traversing the entire count array
-//S.C. --> O(26) {for creating temporary and count array}
+//S.C. --> O(26) ~ O(1) {for creating temporary and count array}
+//if we consider the space which we are consuming for storing answer as well than SPACE COMPLEXITY -- O(L) {L is total number of common characters}
