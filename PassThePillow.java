@@ -8,7 +8,7 @@ class Solution {
         //agar even aata hai toh iska matlab hai abhi hum pillow ko pass kr rahe hai [1-->n] ki taraf
         //but agar ODD aata hai toh iska meaning hai ki pillow [n-->1] ki taraf pass ho rhi hai
         int temp = n;
-        n--;
+        n--;//n ko 1 se decrease isiliye kar rahe hai because initially 1st position person holds the pillow 
         int val = time/n;
         int rem = time%n;
         //initially tack mei push karado 1 ko kyunki initially first position waale bande ke hand mei pillow hai
