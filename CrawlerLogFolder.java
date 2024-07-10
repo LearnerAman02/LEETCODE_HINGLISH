@@ -22,11 +22,6 @@ class Solution {
                 count++;
             }
         }
-        if(count<=0){
-            return 0;
-        }
-        else{
-            return count;
-        }
+        return count;
     }
 }
