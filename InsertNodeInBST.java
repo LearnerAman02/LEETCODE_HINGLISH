@@ -1,3 +1,5 @@
+//T.C. --> O(logn)
+//S.C. --> O(1)
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -12,44 +14,45 @@
  *         this.right = right;
  *     }
  * }
- Logic -->
- Pehle root node se compare krlo ki kaunse subtree mei node will be inserted kyunki BST hai, than uske basis pe simply Left subtree yaa right subtree ke liye RECURSIVE CALLS lagado
-Ab har ek call mein just aapko ye cheez check karni hai
-//BASE CASE --> node agar null hai toh simply return kar jaao
-Current Node ka left agar null hai aur hamare node to be inserted ki value agar < current node ka value hai than simply currentNode ka left new node krdo and return kar jaao
-
-nhi toh agar Current node ka right null hai aur current node ki value < new node to be inserted ki vakue hai than iss case mei just current node ke right mein new node insert krdo and than return kr jaao
-
-//RECUSRIVE CALLS CONDITION -->
-1 - Agar new node ka val > current node ka value than currnode.right krdo in recursive function
-2 - Agar new node ka val < current node ka value than currnode.left krdo in recursive function
  */
 class Solution {
-    public void insertNode(TreeNode node,int val){
-        if(node==null){
-            return;
-        }
-        if(node.left==null && node.val>val){
-            node.left = new TreeNode(val);
-            return;
-        }
-        if(node.right==null && node.val<val){
-            node.right = new TreeNode(val);
-            return;
-        }
-        if(node.val>val){
-            insertNode(node.left,val);
-        }
-        if(node.val<val){
-            insertNode(node.right,val);
-        }
-    }
     public TreeNode insertIntoBST(TreeNode root, int val) {
+        TreeNode newNode = new TreeNode(val);
+        //pehle check krlo ROOT null toh nhi hai
+        //agar hai than simly newNode create krdo, and make it a ROOT
         if(root==null){
-            root = new TreeNode(val);
+            root = newNode;
             return root;
         }
-        insertNode(root,val);
+        else{
+            //means root exist krta hai
+            //toh first just make a check if the value to be inserted is > than current node ka value than simply
+            //go to RIGHT SUBTREE 
+            if(root.val<val){
+                if(root.right == null){
+                    //if current node ka right is NULL than it is the place to put the newNode
+                    root.right = newNode;
+                    return root;
+                }
+                else if(root.right!=null){
+                    //else keep on going deeper in the RIGHT SUBTREE till u get current Node ka right is NULL
+                    TreeNode n = insertIntoBST(root.right,val);
+                }
+            }
+            else{
+                //root.val>key
+                //now just make a check if the value to be inserted is < than current node ka value than simply
+                //go to LEFT SUBTREE 
+                if(root.left == null){
+                    root.left = newNode;
+                    return root;
+                }
+                else if(root.left!=null){
+                    //else keep on going deeper in the LEFT SUBTREE till u get current Node ka left is NULL
+                    TreeNode n = insertIntoBST(root.left,val);
+                }
+            }
+        }
         return root;
     }
 }
